@@ -1,0 +1,100 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+*{margin: 0;padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {vertical-align: top;}
+ul::after {content: ""; clear: both; display: block;}
+body { font-family: 'Nanum Gothic';}
+.blind {position: absolute; top: -99; right: -99; display: none;}
+
+header {background: #fff; height: 70px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); position: fixed; z-index: 99; width: 100%;}
+.wrap {width: 1200px; margin: 0 auto; position: relative;}
+header img {height: 40px; margin-top: 16px;}
+header .gnb {font-weight: bold; position: absolute; top: 0;left: 170px; height: 70px;}
+header .gnb li {float: left; margin-left: 90px; line-height: 70px;}
+header .snb {font-size: 12px; color: #666;  position: absolute; top: 0; right: 0;}
+header .snb li {float: left; line-height: 70px;}
+header .snb li::after {content: "|"; font-size: 10px; margin: 0 6px; position: relative; top: -1px;}
+header .snb li:last-child::after {display: none; margin: 0;}
+
+.blank {height: 70px;} /* block요소로 header 높이만큼 아래 컨텐츠가 올라오지 않도록 방어 */
+
+#main {background: #f3f2f0;}
+#main .slide article {position: absolute; top: 60px;left: 60px; color: #fff;}
+#main .slide article h3 {font-size: 30px; font-weight: 900;}
+#main .slide article p {font-size: 16px; margin-top: 24px; line-height: 1.4;}
+#main .slide article a {margin-top: 36px; border: 1px solid #fff; display: block; width: 180px;  padding: 10px 10px; text-align: center;}
+#main .slide article a i {position: relative; top: 1px; margin-left: 5px;}
+#main .slide ul {display: flex; justify-content: center; position: relative; bottom: 30px;}
+#main .slide ul li a {width: 12px; height: 12px; border-radius: 12px; background: #fff; display: block; text-indent: -99px; overflow: hidden; margin: 0 5px;}
+#main .slide ul li.select a {background: #000;}
+#main .slide > a {position: absolute; top: calc(50% - 12px);}
+#main .slide .prev {left: -30px;}
+#main .slide .next {right: -30px;}
+
+#main .go a {font-size: 16px; font-weight: 900; margin-right: 1px; float: left; width: 299px; height: 100px; display: flex; align-items: center; padding: 0 40px; box-sizing: border-box;}
+#main .go ul li:last-child a {margin-right: 0; width: 300px;}
+#main .go ul li:nth-child(1) a { background: #ffffff url(../images/icon1.png) no-repeat right 30px center; }
+#main .go ul li:nth-child(2) a { background: #ffffff url(../images/icon2.png) no-repeat right 30px center; }
+#main .go ul li:nth-child(3) a { background: #ffffff url(../images/icon3.png) no-repeat right 30px center; }
+#main .go ul li:nth-child(4) a { background: #ffffff url(../images/icon4.png) no-repeat right 30px center; }
+/* backgroun: #색상 url주소 배치방법 가로좌표 세로좌표; */
+
+#bnr {background: #e9e5e4;}
+#bnr .wrap {padding-bottom: 40px;}
+#bnr .wrap ul {padding-top: 40px;}
+#bnr .wrap ul li {float: left;}
+#bnr .wrap ul li a p {font-weight: bold; padding: 14px 20px; height: 50px; background: #fff; box-sizing: border-box;}
+#bnr .wrap > a {position: absolute; top: calc(50% - 37px);}
+#bnr .wrap .prev {left: -30px;}
+#bnr .wrap .next {right: -30px;}
+
+#dp {background: #f2efec; padding-top: 80px;}
+#dp article {width: 400px; float: left;}
+#dp article h3 {font-weight: 900; font-size: 36px; line-height: 1.4;}
+#dp article p {font-size: 16px; line-height: 1.4; margin-top: 30px;}
+#dp article a {border: 1px solid #000; display: inline-block; padding: 10px 10px; text-align: center; width: 190px; box-sizing: border-box; margin-top: 30px;}
+#dp .wrap > img {width: 800px;}
+#dp ul {display: flex; justify-content: center; position: absolute; bottom: 30px; left: 0; width: 100%;} /* 밑에서 위로 이동해야하기 때문에 position을 기본값 static에서 absolute로 바꾸고 상하,좌우 값을 주자. 그리고 너비 값이 있어야 좌우 정렬 할수 있음 중요하다! */
+#dp ul li {margin: 0 5px;}
+#dp ul li a {width: 12px; height: 12px; border-radius: 12px; background: #fff; display: block; text-indent: -99px; overflow: hidden;}
+#dp ul li.select a {background: #000;}
+#dp .wrap > a {position: absolute; top: calc(50% - 12px);} /* padding값은 계산에 포함 X */
+#dp .wrap .prev {left: -30px;}
+#dp .wrap .next {right: -30px;}
+
+#service {background: #e9e5e4;}
+#service h2 {font-size: 30px; font-weight: 900; line-height: 120px;}
+#service ul li {float: left;}
+#service ul li a {color: #fff; font-size: 14px; font-weight: bold; width: 300px; height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.4;}
+#service ul li:nth-child(1) a{background: url(../images/main_drv1.jpg) no-repeat center;}
+#service ul li:nth-child(2) a{background: url(../images/main_drv2.jpg) no-repeat center;}
+#service ul li:nth-child(3) a{background: url(../images/main_drv3.jpg) no-repeat center;}
+#service ul li:nth-child(4) a{background: url(../images/main_drv4.jpg) no-repeat center;}
+
+#loc {padding-top: 80px; margin-bottom: 20px;}
+#loc li{float: left; margin-right: 30px;}
+#loc li:last-child {margin-right: 0px;}
+#loc li a p {font-weight: bold; height: 60px; padding: 20px 10px; box-sizing: border-box;}
+#loc .wrap > a {position: absolute; top: calc(50% - 53px); width: 46px; height: 46px; background: rgba(255, 255, 255, 0.9); display: flex; align-items: center; justify-content: center;}
+#loc .wrap .next {right: 0px;}
+
+footer {background: #252525; color: #bbb; padding-top: 50px;}
+
+footer .link li {float: left; font-size: 14px;}
+footer .link li::after {content: "|"; position: relative; top: -1px; margin: 0 20px;}
+footer .link li:last-child::after {display: none; margin: 0;}
+footer .link li i {font-style: normal; font-size: 8px; position: relative; top: -2px; margin-left: 5px;}
+
+footer address {padding-top: 20px;}
+footer address span {font-style: normal; font-size: 12px; margin-right: 28px; line-height: 2;}
+footer address span:last-child {display: block; margin: 0;} /* float:left는 띄워지면서 높이 인식x*/
+
+footer .sns {position: absolute; right: 0; bottom: 8px;}
+footer .sns li {float: left; margin-left: 20px;}
+footer .sns li img {height: 20px;}
+
+footer .bg {background: #1c1b1b; margin-top: 40px;}
+footer .bg .wrap {height: 60px; display: flex; justify-content: space-between; align-items: center;} /*flex 주는 곳에 크기 값 줄것*/
+footer .bg img {height: 20px;}
+footer .bg p {font-size: 12px;}
